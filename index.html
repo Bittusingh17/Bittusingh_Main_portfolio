@@ -434,17 +434,18 @@
 </section>
 <script src="script.js"></script>
     
-<script>
+
+    <script>
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-links');
   const navLinks = document.querySelectorAll('#nav-links a');
 
-  // Toggle nav on menu icon click
+  // Show/Hide Nav on ☰ click
   toggle.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
 
-  // Auto-hide nav when a link is clicked
+  // Auto-hide nav on link click
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('active');
@@ -453,8 +454,10 @@
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
