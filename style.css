@@ -131,6 +131,28 @@ nav a.active {
     color: #161616;
   }
 }
+/* Hamburger icon (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* Show hamburger on smaller screens */
+@media (max-width: 995px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
+
 /* ==== HEADER STYLES ==== */
 header {
   position: fixed;
@@ -1019,3 +1041,4 @@ section.visible {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
