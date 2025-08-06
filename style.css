@@ -81,12 +81,13 @@ header.scrolled {
   transform: scale(1.1);
 }
 
-/* Navigation links */
-nav {
+/* === DESKTOP NAVIGATION === */
+#nav-links {
   display: flex;
   gap: 3rem;
 }
-nav a {
+
+#nav-links a {
   font-size: 1.6rem;
   color: white;
   text-decoration: none;
@@ -95,43 +96,14 @@ nav a {
   border-bottom: 3px solid transparent;
   transition: 0.3s;
 }
-nav a:hover,
-nav a.active {
+
+#nav-links a:hover,
+#nav-links a.active {
   color: #b74b4b;
   border-bottom: 3px solid #b74b4b;
 }
 
-/* Responsive Nav */
-@media(max-width: 995px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    background-color: #161616;
-    border: 2px solid #b74b4b;
-    border-radius: 1rem;
-    padding: 1rem;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  nav a {
-    color: #b74b4b;
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-  }
-
-  nav a:hover {
-    background: #b74b4b;
-    color: #161616;
-  }
-}
-/* Hamburger icon (hidden on desktop) */
+/* === HAMBURGER ICON (HIDDEN ON DESKTOP) === */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -146,13 +118,7 @@ nav a.active {
   border-radius: 3px;
 }
 
-/* Show hamburger on smaller screens */
-@media (max-width: 995px) {
-  .menu-toggle {
-    display: flex;
-  }
-}
-/* Hide menu and show hamburger icon on mobile */
+/* === MOBILE RESPONSIVE NAVIGATION === */
 @media (max-width: 995px) {
   #nav-links {
     display: none;
@@ -171,22 +137,23 @@ nav a.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+  #nav-links a {
+    color: #b74b4b;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
   }
 
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
+  #nav-links a:hover {
+    background: #b74b4b;
+    color: #161616;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 }
 
-/* On desktop: show nav, hide menu-toggle */
+/* === DESKTOP RESET === */
 @media (min-width: 996px) {
   #nav-links {
     display: flex !important;
@@ -1089,5 +1056,6 @@ section.visible {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 
 
