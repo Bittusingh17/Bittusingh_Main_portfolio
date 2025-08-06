@@ -12,18 +12,27 @@
 </head>
 <body>
     <header>
-    <h1 class="portfolio-title">Portfolio</h1>
+  <h1 class="portfolio-title">Portfolio</h1>
 
-    <nav>
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#memories" class="nav-link">Memories</a>
-        <a href="#contact" class="nav-link">Contact</a>   
-    </nav>
+  <!-- Hamburger Toggle Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav id="nav-links">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#achievements" class="nav-link">Achievements</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#memories" class="nav-link">Memories</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
 </header>
+
 
 
 
@@ -424,8 +433,18 @@
 </div>
 </section>
 <script src="script.js"></script>
+    <script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
