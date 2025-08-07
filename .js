@@ -29,6 +29,7 @@ document.querySelector("#cards").addEventListener("mousemove", e => {
   });
 });
 
+// Hamburger Menu Toggle
 const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav-links");
 const navLinks = document.querySelectorAll("#nav-links a");
@@ -37,8 +38,18 @@ toggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
+// Optional: Hide menu after clicking a nav link (for mobile)
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
     nav.classList.remove("active");
   });
 });
+
+// Hero Popup Hide
+const heroPopup = document.getElementById("hero-popup");
+const closeHeroBtn = document.getElementById("close-hero");
+
+closeHeroBtn.addEventListener("click", () => {
+  heroPopup.style.display = "none";
+});
+
