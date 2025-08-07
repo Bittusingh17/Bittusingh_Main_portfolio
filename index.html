@@ -11,6 +11,13 @@
     <title>Portfolio Website</title>
 </head>
 <body>
+          <!-- Hero Popup -->
+<div class="hero-popup" id="hero-popup">
+  <h2>Hi, I'm Bittu Singh</h2>
+  <p>Welcome to my portfolio. Let’s explore my journey!</p>
+  <button id="close-hero">Explore Portfolio</button>
+</div>
+
   <header>
   <h1 class="portfolio-title">Portfolio</h1>
 
@@ -32,12 +39,6 @@
     <a href="#contact" class="nav-link">Contact</a>
   </nav>
 
-      <!-- Hero Popup -->
-<div class="hero-popup" id="hero-popup">
-  <h2>Hi, I'm Bittu Singh</h2>
-  <p>Welcome to my portfolio. Let’s explore my journey!</p>
-  <button id="close-hero">Explore Portfolio</button>
-</div>
 
 </header>
     
@@ -460,6 +461,15 @@
     });
   });
 </script>
+    <script>
+  const closeHeroBtn = document.getElementById("close-hero");
+  const heroPopup = document.getElementById("hero-popup");
+
+  closeHeroBtn.addEventListener("click", () => {
+    heroPopup.classList.add("hide");
+  });
+</script>
+
 
 
 
@@ -467,6 +477,7 @@
 
 </body>
 </html>
+
 
 
 
