@@ -28,3 +28,17 @@ document.querySelector("#cards").addEventListener("mousemove", e => {
     card.style.setProperty("--mouse-y", `${y}px`);
   });
 });
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+const navLinks = document.querySelectorAll("#nav-links a");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
