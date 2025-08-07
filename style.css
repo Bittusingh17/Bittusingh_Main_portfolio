@@ -19,6 +19,10 @@ section {
   padding: 80px 20px;
   transition: all 0.5s ease;
 }
+section {
+  padding: 5rem 2rem;
+}
+
 .hero {
   text-align: center;
   padding: 6rem 2rem;
@@ -1077,6 +1081,7 @@ section.visible {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 
 
 
