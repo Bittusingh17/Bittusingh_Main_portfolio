@@ -19,6 +19,20 @@ section {
   padding: 80px 20px;
   transition: all 0.5s ease;
 }
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to right, #111, #1c1c1c);
+  color: white;
+}
+.hero h2 {
+  font-size: 3rem;
+}
+.hero p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
 
 
 body {
@@ -1063,6 +1077,7 @@ section.visible {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 
 
 
