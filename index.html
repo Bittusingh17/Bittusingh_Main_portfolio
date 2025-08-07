@@ -8,17 +8,12 @@
   <!-- External Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- Local CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-
 <body>
 
   <!-- ✅ Hero Section (Popup on load) -->
   <div class="hero-popup" id="hero-popup">
     <h2>Hi, I'm Bittu Singh</h2>
-    <p>Welcome to my portfolio. Let’s explore my journey!</p>
+    <p>Welcome to my portfolio. Let's explore my journey!</p>
     <button id="close-hero">Explore Portfolio</button>
   </div>
 
@@ -45,14 +40,9 @@
     </nav>
   </header>
 
-
-
-
-
-
 <section id="home" class="home">
         <div class="home-img">
-            <img src="main.jpeg" alt="">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Profile">
         </div>
         <div class="home-content">
           <div class="home-subtitle">Welcome to my Portfolio</div>
@@ -76,7 +66,7 @@
                 <h3>My Journey</h3>
                 <p>I am a curious soul with a creative mind, always eager to explore new ideas and understand the world differently. As a dedicated student and proven leader, I believe in growth through experience and the power of continuous self-improvement.</p>
                 <p>Every step I take is guided by purpose, passion, and the desire to leave something meaningful behind. My journey from being Head Boy to pursuing Computer Science reflects my commitment to excellence and innovation.</p>
-                <a href="#achievements" class="btn-primary" style="display: inline-flex; margin-top: 2rem;">
+                <a href="#achievements" class="btn-primary">
                     View Achievements
                 </a>
             </div>
@@ -125,73 +115,17 @@
       <h3>🏏 Team Games Champion</h3>
       <p>Secured top positions in kabaddi, football, and relay under my captaincy.</p>
     </div>
-    <!-- Add more achievement cards if needed -->
   </div>
 
   <!-- Horizontal Image Scroll Gallery -->
   <h3 class="section-heading">📸 Awards & Certificates Gallery</h3>
   <div class="scroll-gallery">
-    <img src="images/certificate1.jpeg" alt="Certificate 1">
-    <img src="images/certificate2.jpeg" alt="Certificate 2">
-    <img src="images/trophy.jpeg" alt="Trophy">
-    <img src="images/group-game.jpeg" alt="Group Game">
-    <!-- Add more image tags as needed -->
+    <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=300&h=200&fit=crop" alt="Certificate 1">
+    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop" alt="Certificate 2">
+    <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=300&h=200&fit=crop" alt="Trophy">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" alt="Group Game">
   </div>
 </section>
-<script>
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - sectionHeight / 4) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-<script>
-  // Smooth scroll with offset for fixed header
-  document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(e) {
-      e.preventDefault(); // stop default jump
-      const targetId = this.getAttribute("href").substring(1); // remove #
-      const target = document.getElementById(targetId);
-      const offset = 70; // adjust this based on your header height
-
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - offset,
-          behavior: "smooth"
-        });
-      }
-    });
-  });
-</script>
-
 
 <section id="skills" class="section skills-section">
   <h2 class="section-title">My Core Skills 💼</h2>
@@ -225,25 +159,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  const skillCards = document.querySelectorAll('.skill-card');
-
-  function revealOnScroll() {
-    skillCards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        card.classList.add('visible');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
-</script>
-
-
-
 
 <section id="education" class="education-section">
   <h2 class="section-title">🎓 My Education Journey</h2>
@@ -295,77 +210,59 @@
   </div>
 </section>
 
-<section id="memories"  class="education-section">
-  <h2 class="gallery-title">  My Memories</h2>
+<section id="memories" class="education-section">
+  <h2 class="gallery-title">My Memories</h2>
   
   <div class="memories-grid">
     <div class="memory-card">
       <span class="category-tag">College</span>
-      <img src="images/college.jpg" alt="College Life">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=300&h=200&fit=crop" alt="College Life">
       <div class="memory-title">Mumbai College Days</div>
     </div>
     
     <div class="memory-card">
       <span class="category-tag">Travel</span>
-      <img src="images/pune.jpg" alt="Pune">
+      <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=300&h=200&fit=crop" alt="Pune">
       <div class="memory-title">Exploring Pune</div>
     </div>
 
     <div class="memory-card">
       <span class="category-tag">Adventure</span>
-      <video src="images/nepal.mp4" autoplay muted loop></video>
+      <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=300&h=200&fit=crop" alt="Nepal">
       <div class="memory-title">Trip to Nepal</div>
     </div>
 
     <div class="memory-card">
       <span class="category-tag">Hometown</span>
-      <img src="images/bihar.jpg" alt="Bihar">
+      <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop" alt="Bihar">
       <div class="memory-title">Back in Bihar</div>
     </div>
 
     <div class="memory-card">
       <span class="category-tag">Festival</span>
-      <img src="images/diwali.jpg" alt="Diwali">
+      <img src="https://images.unsplash.com/photo-1605979399824-6e5d39e57e95?w=300&h=200&fit=crop" alt="Diwali">
       <div class="memory-title">Diwali Nights</div>
     </div>
 
     <div class="memory-card">
       <span class="category-tag">Picnic</span>
-      <img src="images/picnic.jpg" alt="Picnic">
+      <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=200&fit=crop" alt="Picnic">
       <div class="memory-title">Park Hangout</div>
     </div>
 
     <div class="memory-card">
       <span class="category-tag">Food</span>
-      <video src="images/explore.mp4" autoplay muted loop></video>
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop" alt="Street Food">
       <div class="memory-title">Mumbai Street Food</div>
     </div>
 
     <div class="memory-card">
       <span class="category-tag">Nature</span>
-      <img src="images/hills.jpg" alt="Nepal Hills">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Nepal Hills">
       <div class="memory-title">Hills of Nepal</div>
     </div>
-
    </div>
 </section>
-
-
-<script>
-  const container = document.querySelector('.carousel-container');
-
-  let scrollAmount = 0;
-  setInterval(() => {
-    scrollAmount += 270; // scroll to next card
-    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-      scrollAmount = 0;
-    }
-    container.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  }, 3000); // every 3 seconds
-</script>
 
 <section id="contact">
   <h2 class="section-title">📞 Contact Me</h2>
@@ -436,36 +333,157 @@
 
     <!-- YouTube -->
     <div class="card fade-in-up">
-  <div class="card-content">
-    <i class="fa-brands fa-youtube"></i>
-    <h2>YouTube</h2>
-    <a class="youtube-btn" href="https://youtube.com/@bittu_unfiltered?si=HDEsM3HtWvrtgWks" target="_blank">
-      <i class="fa-solid fa-link"></i>
-      <span>Subscribe</span>
-    </a>
+      <div class="card-content">
+        <i class="fa-brands fa-youtube"></i>
+        <h2>YouTube</h2>
+        <a class="youtube-btn" href="https://youtube.com/@bittu_unfiltered?si=HDEsM3HtWvrtgWks" target="_blank">
+          <i class="fa-solid fa-link"></i>
+          <span>Subscribe</span>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-</script>
-    <script>
-  const closeHeroBtn = document.getElementById("close-hero");
-  const heroPopup = document.getElementById("hero-popup");
-
-  closeHeroBtn.addEventListener("click", () => {
-    heroPopup.classList.add("hide");
+<script>
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Header scroll effect
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    header.classList.toggle('scrolled', window.scrollY > 50);
   });
+
+  // Fade in animations
+  const fadeIns = document.querySelectorAll('.fade-in-up');
+  const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2,
+  });
+
+  fadeIns.forEach(el => fadeInObserver.observe(el));
+
+  // Cards mouse effect
+  const cards = document.querySelectorAll(".card");
+  const cardsContainer = document.querySelector("#cards");
+  
+  if (cardsContainer) {
+    cardsContainer.addEventListener("mousemove", e => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      });
+    });
+  }
+
+  // Hamburger Menu Toggle
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+  const navLinks = document.querySelectorAll("#nav-links a");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
+
+  // Hide menu after clicking a nav link (for mobile)
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      nav.classList.remove("active");
+      
+      // Smooth scroll with offset for fixed header
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const target = document.getElementById(targetId);
+      const offset = 80; // adjust based on your header height
+
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Hero Popup Hide
+  const heroPopup = document.getElementById("hero-popup");
+  const closeHeroBtn = document.getElementById("close-hero");
+
+  if (closeHeroBtn && heroPopup) {
+    closeHeroBtn.addEventListener("click", () => {
+      heroPopup.classList.add("hide");
+    });
+  }
+
+  // Navigation active link highlighting
+  const sections = document.querySelectorAll("section");
+  
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Remove active class from all nav links
+        navLinks.forEach(link => link.classList.remove("active"));
+        
+        // Add active class to current section's nav link
+        const activeLink = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      }
+    });
+  }, { 
+    threshold: 0.3,
+    rootMargin: "-80px 0px -50% 0px"
+  });
+
+  sections.forEach(section => {
+    navObserver.observe(section);
+  });
+
+  // Skill cards animation
+  const skillCards = document.querySelectorAll('.skill-card');
+  
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  skillCards.forEach(card => {
+    skillObserver.observe(card);
+  });
+
+});
 </script>
-      <script src="script.js"></script>
-
-
-
-
-
-
-
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
